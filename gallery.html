@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эксперимент с Bootstsrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="custom.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <body>
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Моё Портфолио</h2>
+            <!-- Кнопки фильтров-->
+            <div class="text-center mb-4">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-outline-primary" onclick="filterGallery('all')">Все</button>
+                    <button class="btn btn-outline-primary" onclick="filterGallery('web')">Веб-дизайн</button>
+                    <button class="btn btn-outline-primary" onclick="filterGallery('photo')">Фотография</button>
+                    <button class="btn btn-outline-primary" onclick="filterGallery('graphic')">Графика</button>
+                </div>
+            </div>
+
+            <div class="row g-3" id="gallery">
+                <!-- Карточка 1 - Веб-дизайн -->
+                <div class="col-6 col-md-4 gallery-item" data-category="web">
+                    <div class="card h-100">
+                        <img src="https://img.freepik.com/premium-photo/design-website-create-template-layout-concept_1158146-31292.jpg?semt=ais_hybrid"
+                            class="card-img-top" alt="Веб-проект">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0">Корпоративный сайт</h6>
+                            <small class="text-muted">Веб-дизайн</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3" id="gallery">
+                <!-- Карточка 2 - Веб-дизайн -->
+                <div class="col-6 col-md-4 gallery-item" data-category="web">
+                    <div class="card h-100">
+                        <img src="https://img.freepik.com/premium-photo/web-design-concept-with-main-screen-floating-websites-traditional-design-tools-like-pencil-brush_176814-2586.jpg"
+                            class="card-img-top" alt="Веб-проект">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0">Веб</h6>
+                            <small class="text-muted">Веб-дизайн</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3" id="gallery">
+                <!-- Карточка 3 - Фото -->
+                <div class="col-6 col-md-4 gallery-item" data-category="photo">
+                    <div class="card h-100">
+                        <img src="https://avatars.mds.yandex.net/i?id=4383e2f4ef345e442609c3786371c818489bdf46-4824430-images-thumbs&n=13"
+                            class="card-img-top" alt="Веб-проект">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0">Нью-Йорк</h6>
+                            <small class="text-muted">Фото</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3" id="gallery">
+                <!-- Карточка 4 - Графика -->
+                <div class="col-6 col-md-4 gallery-item" data-category="graphic">
+                    <div class="card h-100">
+                        <img src="https://as2.ftcdn.net/jpg/01/24/89/77/1000_F_124897733_zTfgsLAaWDZinxZFdtLvgPC7XcrOoPcd.jpg"
+                            class="card-img-top" alt="Веб-проект">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0">"Утренний расвет... Солнце поднималось над землей..." КИШ</h6>
+                            <small class="text-muted">Графика</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3" id="gallery">
+                <!-- Карточка 5 - Фото -->
+                <div class="col-6 col-md-4 gallery-item" data-category="photo">
+                    <div class="card h-100">
+                        <img src="https://i.pinimg.com/736x/ca/6d/30/ca6d3012ead94a58e9a1817ac61e3395.jpg"
+                            class="card-img-top" alt="Веб-проект">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0">Paris</h6>
+                            <small class="text-muted">Фото</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3" id="gallery">
+                <!-- Карточка 6 - Графика -->
+                <div class="col-6 col-md-4 gallery-item" data-category="graphic">
+                    <div class="card h-100">
+                        <img src="https://avatars.mds.yandex.net/i?id=86eb0b400f164cda59b0f35f9cb36901ba67d1ec-5268626-images-thumbs&n=13"
+                            class="card-img-top" alt="Веб-проект">
+                        <div class="card-body p-2">
+                            <h6 class="card-title mb-0">Затопленное село Смуглянка</h6>
+                            <small class="text-muted">Графика</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </body>
+    <script>
+        function filterGallery(catagory) {
+            const items = document.querySelectorAll(".gallery-item");
+            const buttons = document.querySelectorAll(".btn-group .btn");
+            items.forEach((item) => {
+                const itemCategory = item.dataset.catagory;
+                if (category === "all" || category === itemCategory) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+            buttons.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+            event.target.classList.add("active");
+        }
+
+        window.onload = function () {
+            document.querySelector(".btn-group .btn").classList.add("active");
+        };
+
+    </script>
+
+</html>
