@@ -97,6 +97,79 @@
             </div>
         </div>
     </div>
+    <!-- формы для валидацией и адаптивностью-->
+    <!-- Секция с формой -->
+    <div class="container my-5" id="contact">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <h2 class="text-center mb-4">Свяжитесь с нами</h2>
+                <form id="contactForm" class="needs-validation" novalidate>
+                    <!-- Имя -->
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required
+                            </body>
+                        
+                        <div class="invalid-feedback">Пожалуйста, введите ваше имя</div>
+                    </div>
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
+                        <div class="invalid-feedback">
+                            Пожалуйста, введите корректный email
+                        </div>
+                    </div>
+                    <!-- Сообщение -->
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Ваше сообщение"
+                            required></textarea>
+                        <div class="invalid-feedback">Пожалуйста, введите сообщение</div>
+                    </div>
+                    <!-- Checkbox -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="agree" required />
+                        <label class="form-check-label" for="agree">
+                            Я согласен с политикой конфиденциальности
+                        </label>
+                        <div class="invalid-feedback">
+                            Вы должны согласиться с условиями
+                        </div>
+                    </div>
+                    <!-- Кнопка отправки -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            Отправить сообщение
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Валидация формы Bootstrap
+        (function () {
+            "use strict";
+            const form = document.getElementById("contactForm");
+            form.addEventListener(
+                "submit",
+                function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    } else {
+                        event.preventDefault();
+                        alert("Форма успешно отправлена!");
+                        form.reset();
+                        form.classList.remove("was-validated");
+                    }
+                    form.classList.add("was-validated");
+                },
+                false
+            );
+        })();
+    </script>
 </body>
 
 </html>
